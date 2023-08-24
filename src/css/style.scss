@@ -1,0 +1,19 @@
+@import "~the-new-css-reset";
+@import "../css/fonts.scss";
+@import "../css/colors.scss";
+
+[class*='__container'] {
+  max-width: 83.875rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+[class*='__container--small'] {
+  max-width: 75.1875rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+.header {
+  min-height: 7.5rem;
+}

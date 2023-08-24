@@ -1,0 +1,45 @@
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/space-mono-v13-latin-regular.woff2') format('woff2'), 
+       url('../assets/fonts/space-mono-v13-latin-regular.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Nanum Pen Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/nanum-pen-script-v19-latin-regular.woff2') format('woff2'), 
+       url('../assets/fonts/nanum-pen-script-v19-latin-regular.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Circular-Std-Book';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/Circular-Std-Book.woff2') format('woff2'), 
+       url('../assets/fonts/Circular-Std-Book.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Circular-Std-Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../assets/fonts/Circular-Std-Medium.woff2') format('woff2'), 
+       url('../assets/fonts/Circular-Std-Medium.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Circular-Std-Bold';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../assets/fonts/CircularStd-Bold.woff2') format('woff2'), 
+       url('../assets/fonts/CircularStd-Bold.ttf') format('truetype'); 
+}
