@@ -198,6 +198,7 @@ body {
     font-size: 18px;
     color: $accentBrand;
     display: inline-flex;
+    margin-bottom: 5rem;
     &::after {
       content: "";
       width: 24px;
@@ -208,6 +209,40 @@ body {
     }
   }
 }
+.featuredGrants {
+
+  &__slider {
+    width: 100%;
+    display: flex;
+  }
+
+  &__slider-wrapper {
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cyan;
+  }
+
+  &__button-prev {
+  }
+
+  &__button-next {
+  }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+
 
 
 
