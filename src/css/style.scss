@@ -2,9 +2,14 @@
 @import "../css/fonts.scss";
 @import "../css/colors.scss";
 
+:root {
+  --header-height: 7.5rem;
+}
+
 body {
   height: 100dvh;
-  background-color: $secondaryBackground;
+  background-color: $primaryBackground;
+  overflow-x: hidden;
 }
 
 [class*='__container'] {
@@ -16,6 +21,13 @@ body {
 
 [class*='__container--small'] {
   max-width: 75.1875rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  margin: 0 auto;
+}
+
+[class*='__container--xsmall'] {
+  max-width: 48.625rem;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   margin: 0 auto;
@@ -33,9 +45,10 @@ body {
 
 .header {
   color: #fff;
-  min-height: 7.5rem;
+  min-height: var(--header-height);
   display: flex;
   align-items: center;
+
   &__logo {
     margin-right: auto;
   }
@@ -68,4 +81,107 @@ body {
     }
   }
 }
+.page-main {
+  color: #fff;
+  font-family: 'Circular-Std-Bold' ,sans-serif;
+  &__achievements {
+    position: relative;
+    z-index: 3;
+  }
+}
+.achievements {
+  &__header {
+    font-size: 80px;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__bottons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__botton {
+    min-width: 11.25rem;
+    &--bgColor {
+      background-color: $secondaryBackground;
+    }
+    &-apply {
+      &::after {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        background-image: url('../img/fi_arrow-right.svg');
+        background-repeat: no-repeat;
+        margin-left: 0.75rem;
+      }
+    }
+  }
+  &__botton:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &__achievement {
+    display: flex;
+    margin-top: 5rem;
+    font-family: 'Space_Mono', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13rem;
+  }
+
+  .achievement__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-heading {
+      font-size: 1.25rem;
+      color: #fff;
+    }
+    &-text {
+      color: $icons;
+      font-size: 1.125rem;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 37.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  &__description-header {
+    font-family: 'Circular-Std-Bold' ,sans-serif;
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
+
+  &__description-text {
+    font-family: 'Circular-Std', sans-serif;
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+  }
+  &__description-link {
+    font-family: 'Circular-Std', sans-serif;
+    font-size: 18px;
+    color: $accentBrand;
+    display: inline-flex;
+    &::after {
+      content: "";
+      width: 24px;
+      height: 1.5rem;
+      background-image: url('../img/fi_arrow-right_brand.svg');
+      background-repeat: no-repeat;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
 
