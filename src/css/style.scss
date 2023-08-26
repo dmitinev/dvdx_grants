@@ -7,7 +7,6 @@
 }
 
 body {
-  height: 100dvh;
   background-color: $primaryBackground;
   overflow-x: hidden;
 }
@@ -48,6 +47,8 @@ body {
   min-height: var(--header-height);
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 7;
 
   &__logo {
     margin-right: auto;
@@ -66,7 +67,6 @@ body {
     }
 
   }
-
   &__bottons {
     font-family: Circular_Std, sans-serif;
     font-weight: 600;
@@ -84,9 +84,21 @@ body {
 .page-main {
   color: #fff;
   font-family: 'Circular-Std-Bold' ,sans-serif;
+  position: relative;
   &__achievements {
-    position: relative;
-    z-index: 3;
+    &::before {
+      content: "";
+      position: absolute;
+      top: calc(-1 * var(--header-height));
+      left: 0;
+      display: block;
+      width: 100%;
+      height: calc(100% - var(--header-height));
+      background-image: url("../img/Grid_top.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -3;
+    }
   }
 }
 .achievements {
@@ -145,7 +157,20 @@ body {
       font-size: 1.125rem;
     }
   }
-
+}
+.featuredGrants {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../img/Down_arrow.svg");
+    height: 6.25rem;
+    width: 2rem;
+    position: absolute;
+    bottom: calc(100% + 1.3125rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
   &__description {
     display: flex;
     flex-direction: column;
@@ -156,13 +181,13 @@ body {
     margin-right: auto;
     text-align: center;
   }
-
+  
   &__description-header {
     font-family: 'Circular-Std-Bold' ,sans-serif;
     font-size: 40px;
     margin-bottom: 1rem;
   }
-
+  
   &__description-text {
     font-family: 'Circular-Std', sans-serif;
     font-size: 18px;
@@ -183,5 +208,6 @@ body {
     }
   }
 }
+
 
 
