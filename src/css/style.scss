@@ -2,18 +2,70 @@
 @import "../css/fonts.scss";
 @import "../css/colors.scss";
 
+body {
+  height: 100dvh;
+  background-color: $secondaryBackground;
+}
+
 [class*='__container'] {
   max-width: 83.875rem;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
+  margin: 0 auto;
 }
 
 [class*='__container--small'] {
   max-width: 75.1875rem;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
+  margin: 0 auto;
+}
+
+.botton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 8.8125rem;
+  min-height: 3rem;
+  background-color: $accentBrand;
+  border-radius: 0.4556rem;
 }
 
 .header {
+  color: #fff;
   min-height: 7.5rem;
+  display: flex;
+  align-items: center;
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__navigation {
+    font-family: Space_Mono, sans-serif;
+    font-size: 1rem;
+    padding-left: 0.75rem;
+    &-items {
+      display: flex;
+      align-items: center;
+      &-item:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+
+  }
+
+  &__bottons {
+    font-family: Circular_Std, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    
+    &-botton:first-child {
+      margin-left: 0.75rem;
+    }
+    &-botton:not(:last-child) {
+      margin-right: 0.75rem;
+    }
+  }
 }
+
