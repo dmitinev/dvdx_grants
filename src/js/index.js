@@ -6,14 +6,15 @@ window.addEventListener("load", () => {
   new Swiper('.featuredGrants__slider', {
     slidesPerView: 3,
     spaceBetween: 24,
-    loop: true,
+    speed: 3000,
     autoplay: {
-      delay: 3000,
+      delay: 2000,
       disableOnInteraction: false,
     },
     navigation: {
-      prevEl: '.featuredGrants__button-prev',
       nextEl: '.featuredGrants__button-next',
+      prevEl: '.featuredGrants__button-prev',
+
     },
   });
 })
