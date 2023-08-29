@@ -4,6 +4,7 @@
 
 :root {
   --header-height: 7.5rem;
+  --sliderCard-width: 1.5em;
 }
 
 body {
@@ -228,12 +229,14 @@ body {
 .grantProject {
   background-color: $secondaryBackground;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: var(--sliderCard-width);
   position: relative;
-  padding: 1.5rem;
-  &--blockModifier {
-    &::before {
-
-    }
+  border-radius: 16px;
+  &__textPanel {
+    min-height: 28rem;
+    flex: 1 1 auto;
   }
   &__label {
     font-family: 'Space_Mono', sans-serif;
@@ -241,6 +244,19 @@ body {
     color: $icons;
     margin-bottom: 0.5rem;
     line-height: 2rem;
+    &--blockModifier {
+      &::before {
+        content: "";
+        display: block;
+        margin-left: calc(-1 * var(--sliderCard-width));
+        margin-top: calc(-1 * var(--sliderCard-width));
+        margin-right: calc(-1 * var(--sliderCard-width));
+        margin-bottom: 1.5625rem;
+        min-height: 11.1875rem;
+        border-radius: 1rem;
+        background-color: #232334;
+      }
+    }
   }
 
   &__heading {
@@ -262,14 +278,11 @@ body {
     margin-right: 0.5rem;
   }
 
-  &__parameters-value {
-  }
-
   &__text {
     font-family: 'Circular-Std-Book', sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
-    margin-bottom: 12rem;
+    // min-height: ;
   }
 
   &__avatarPanel {
