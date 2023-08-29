@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
   new Swiper('.featuredGrants__slider', {
     slidesPerView: 3,
     spaceBetween: 24,
-    speed: 4000,
+    speed: 2000,
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
@@ -14,7 +14,6 @@ window.addEventListener("load", () => {
     navigation: {
       nextEl: '.featuredGrants__button-next',
       prevEl: '.featuredGrants__button-prev',
-
     },
   });
 })

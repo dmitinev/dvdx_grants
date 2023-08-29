@@ -182,11 +182,29 @@ body {
   &__slide {
 
   }
+  .swiper-button-prev, .swiper-button-next{
+    &::after {
+      content: none;
+    }
+  }
+
+  &__button-prev, &__button-next {
+    min-width: 3rem;
+    border-radius: 100%;
+    background-color: #ffffff;
+  }
 
   &__button-prev {
+    transform: rotate(180deg);
+    background-image: url("../img/fi_arrow-right-black.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__button-next {
+    background-image: url("../img/fi_arrow-right-black.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -282,7 +300,6 @@ body {
     font-family: 'Circular-Std-Book', sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
-    // min-height: ;
   }
 
   &__avatarPanel {
@@ -301,6 +318,24 @@ body {
     }
   }
 }
+
+.whatsNew {
+  margin-top: 10rem;
+  position: relative;
+
+  &__infoBlock {
+  }
+
+  &__header {
+  }
+
+  &__text {
+  }
+
+  &__link {
+  }
+}
+
 
 
 
