@@ -16,4 +16,29 @@ window.addEventListener("load", () => {
       prevEl: '.featuredGrants__button-prev',
     },
   });
+
+  const faqItems = document.querySelectorAll("[data-index]");
+  const faqAnswers = document.querySelectorAll("[data-elem]");
+
+  if (faqItems.length > 0) {
+    faqItems.forEach(el => el.addEventListener("click", faqCkickHandler))
+  }
+  
+  function faqCkickHandler(evt) {
+    const sectionIndex = +evt.target.dataset.index
+    faqAnswers.forEach(el => {
+      if (+el.dataset.elem === sectionIndex) {
+        el.classList.toggle("faq__answerText--visible")
+        evt.target.classList.toggle("faq__questionIcon--clicked")
+      } else {
+        el.classList.remove("faq__answerText--visible")
+        faqItems.forEach(el => {
+          if (+el.dataset.index !== sectionIndex) {
+            el.classList.remove("faq__questionIcon--clicked")
+          }
+        })
+      }
+    })
+  }
+
 })

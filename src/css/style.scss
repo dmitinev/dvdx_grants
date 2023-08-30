@@ -328,7 +328,6 @@ body {
     display: block;
     position: absolute;
     width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
     z-index: -1;
@@ -394,10 +393,81 @@ body {
   &__date {
     font-family: 'Space_Mono' ,sans-serif;
     font-size: 1rem;
-    margin: 5rem 1.5rem 0;
+    margin: 5rem 1.5rem 1.5rem 1.5rem;
     color: $icons;
   }
 }
+
+.faq {
+  margin-top: 11.25rem;
+  &__infoBlock {
+    margin-bottom: 5rem;
+  }
+
+  &__header {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      background-image: url("../img/blue_circle.svg");
+      height: 4rem;
+      width: 14.375rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      transform: translate(-100%, 25%);
+    }
+  }
+
+  &__text {
+  }
+
+  &__questions {
+    
+  }
+
+  &__questionsList {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Circular-Std-Book', sans-serif;
+  }
+
+  &__question {
+    display: flex;
+    padding: 1.5rem 0;
+    border-top: 0.0625rem solid #393953;
+    border-bottom: 0.0625rem solid #393953;
+  }
+
+  &__questionText {
+    font-size: 1.125rem;
+  }
+
+  &__questionIcon {
+    margin-left: auto;
+    cursor: pointer;
+    transition: transform .4s;
+  }
+
+  &__questionIcon--clicked {
+    transform: rotate(45deg);
+  }
+
+  &__answerText {
+    border: none;
+    margin: 1.25rem 0;
+    font-size: 1.125rem;
+    display: none;
+    color: $icons;
+  }
+
+  &__answerText--visible {
+    display: block;
+  }
+}
+
 
 
 
