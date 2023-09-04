@@ -50,7 +50,6 @@ body {
   align-items: center;
   position: relative;
   z-index: 7;
-
   &__logo {
     margin-right: auto;
   }
@@ -140,7 +139,6 @@ body {
     display: flex;
     margin-top: 5rem;
     font-family: 'Space_Mono', sans-serif;
-    display: flex;
     justify-content: space-between;
     margin-bottom: 13rem;
   }
@@ -172,16 +170,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
-  &__slider {
-  }
 
-  &__slider-wrapper {
-    width: 100%;
-  }
-
-  &__slide {
-
-  }
   .swiper-button-prev, .swiper-button-next{
     &::after {
       content: none;
@@ -252,7 +241,7 @@ body {
   flex-direction: column;
   padding: var(--sliderCard-width);
   position: relative;
-  border-radius: 16px;
+  border-radius: 0.16rem;
   &__textPanel {
     min-height: 28rem;
     flex: 1 1 auto;
@@ -267,10 +256,7 @@ body {
       &::before {
         content: "";
         display: block;
-        margin-left: calc(-1 * var(--sliderCard-width));
-        margin-top: calc(-1 * var(--sliderCard-width));
-        margin-right: calc(-1 * var(--sliderCard-width));
-        margin-bottom: 1.5625rem;
+        margin: calc(-1 * var(--sliderCard-width)) calc(-1 * var(--sliderCard-width)) 1.5625rem;
         min-height: 11.1875rem;
         border-radius: 1rem;
         background-color: #232334;
@@ -310,12 +296,12 @@ body {
   }
 
   &__avatar {
-    border: 2px solid $secondaryBackground;
+    border: 0.02rem solid $secondaryBackground;
     border-radius: 50%;
     max-width: 2.5rem;
     object-fit: cover;
     &:not(:first-child) {
-     margin-left: -15px;
+     margin-left: -0.15rem;
     }
   }
 }
@@ -467,6 +453,135 @@ body {
     display: block;
   }
 }
+
+.applicationProcess {
+  margin-top: 10rem;
+
+  &__infoBlock {
+  }
+
+  &__header {
+  }
+
+  &__text {
+  }
+
+  &__cardSection {
+    display: flex;
+    margin-top: 3.75rem;
+  }
+
+  &__card {
+    background-color: $secondaryBackground;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    max-width: 24.5rem;
+    min-height: 30rem;
+    position: relative;
+    &--rotatedForward {
+      transform: rotate(2deg) translateY(1.5rem);
+      &::before {
+        content: "";
+        display: block;
+        background-image: url("../img/Right_arrow_curved.svg");
+        max-width: 7.5rem;
+        width: 100%;
+        max-height: 2.5rem;
+        height: 100%;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: -7.1875rem;
+      }
+    }
+
+    &--rotatedBackward {
+      transform: rotate(-1deg) translateY(0.375rem);
+      &::after {
+        content: "";
+        display: block;
+        background-image: url("../img/Right_arrow_curved_rotated.svg");
+        max-width: 7.5rem;
+        width: 100%;
+        max-height: 2.5rem;
+        height: 100%;
+        background-size: cover;
+        position: absolute;
+        bottom: 6.5625rem;
+        left: -5.6875rem;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 1.4375rem;
+    }
+    &:first-child {
+      transform: rotate(-1deg);
+    }
+  }
+
+  &__cardNumber {
+    display: flex;
+    font-family: 'Nanum_Pen_Script', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1.625rem;
+  }
+
+  &__cardHeading {
+    font-family: 'Circular-Std-Bold', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__cardText {
+    font-family: 'Circular-Std-Book', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.cta {
+  margin-top: 8.375rem;
+  &__baner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.10);
+    background: $accentBrand linear-gradient(326deg, #6966FF 24.5%, rgba(105, 102, 255, 0.36) 117.69%);
+  }
+
+  &__label {
+    font-family: 'Circular-Std-Book', sans-serif;
+    font-size: 1.125rem;
+    letter-spacing: -0.0158rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__text {
+    font-family: 'Circular-Std-Bold', sans-serif;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: -0.055rem;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
+
+  &__applyBtn {
+    padding: 1rem;
+    background-color: #FFFFFF;
+    color: $accentBrand;
+    &::after {
+      background-image: url("../img/fi_arrow-right_purple.svg");
+    }
+  }
+}
+
+
 
 
 
