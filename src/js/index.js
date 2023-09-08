@@ -19,6 +19,8 @@ window.addEventListener("load", () => {
 
   const faqItems = document.querySelectorAll("[data-index]");
   const faqAnswers = document.querySelectorAll("[data-elem]");
+  const headerNavigation = document.querySelector(".header__navigation-items")
+  const burgerMenu = document.querySelector(".header__burger")
 
   if (faqItems.length > 0) {
     faqItems.forEach(el => el.addEventListener("click", faqCkickHandler))
@@ -40,5 +42,15 @@ window.addEventListener("load", () => {
       }
     })
   }
+
+
+  function burgerHandler(e) {
+    burgerMenu.classList.toggle("header__burger--active")
+    headerNavigation.classList.toggle("header__navigation-items--active")
+ 
+  }
+
+  burgerMenu.addEventListener("click", burgerHandler);
+
 
 })
