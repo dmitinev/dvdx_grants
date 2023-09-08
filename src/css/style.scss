@@ -14,6 +14,12 @@
   }
 }
 
+@mixin width_320 {
+  @media (width <= 320px) {
+    @content;
+  }
+}
+
 :root {
   --header-height: 7.5rem;
   --sliderCard-width: 1.5em;
@@ -180,10 +186,10 @@ body {
     }
     &--active {
       &::before {
-        transform: rotate(-45deg) translateY(11px);
+        transform: rotate(-45deg) translateY(9px);
       }
       &::after {
-        transform: rotate(45deg) translateY(-11px);
+        transform: rotate(45deg) translateY(-9px);
       }
       & span {
         display: none;
@@ -195,9 +201,6 @@ body {
 .page-main {
   color: #fff;
   font-family: 'Circular-Std-Bold' ,sans-serif;
-
-  &__achievements {
-  }
 }
 .achievements {
   &::before {
@@ -220,12 +223,21 @@ body {
     font-style: normal;
     text-align: center;
     margin-bottom: 2.5rem;
+    @include width_950 {
+      font-size: 3.8rem;
+    }
+    @include width_320 {
+      font-size: 2.5rem;
+    }
   }
 
   &__bottons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    @include width_950 {
+      flex-direction: column;
+    }
   }
 
   &__botton {
@@ -246,6 +258,10 @@ body {
   }
   &__botton:not(:last-child) {
     margin-right: 2rem;
+    @include width_950 {
+      margin-bottom: 1rem;
+      margin-right: 0;
+    }
   }
 
   &__achievement {
@@ -254,9 +270,18 @@ body {
     font-family: 'Space_Mono', sans-serif;
     justify-content: space-between;
     margin-bottom: 13rem;
+    @include width_950 {
+      flex-direction: column;
+      margin-bottom: 6.625rem;
+    }
   }
 
   .achievement__item {
+    @include width_950 {
+      &:not(:first-child) {
+        margin-top: 2rem;
+      }
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -278,6 +303,11 @@ body {
     background-image: url("../img/Down_arrow.svg");
     height: 6.25rem;
     width: 2rem;
+    @include width_950 {
+      width: 1.25rem;
+      height: 3.125rem;
+      background-image: url("../img/Down_arrow__small.svg");
+    }
     position: absolute;
     bottom: calc(100% + 1.3125rem);
     left: 50%;

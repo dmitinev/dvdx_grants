@@ -43,7 +43,6 @@ window.addEventListener("load", () => {
     })
   }
 
-
   function burgerHandler(e) {
     burgerMenu.classList.toggle("header__burger--active")
     headerNavigation.classList.toggle("header__navigation-items--active")
