@@ -4,7 +4,7 @@ import Swiper from 'swiper/bundle';
 
 window.addEventListener("load", () => {
   new Swiper('.featuredGrants__slider', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 24,
     speed: 2000,
     autoplay: {
@@ -15,6 +15,14 @@ window.addEventListener("load", () => {
       nextEl: '.featuredGrants__button-next',
       prevEl: '.featuredGrants__button-prev',
     },
+    breakpoints: {
+      550: {
+        slidesPerView: 2
+      },
+      950: {
+        slidesPerView: 3
+      },
+    }
   });
 
   const faqItems = document.querySelectorAll("[data-index]");
@@ -43,7 +51,7 @@ window.addEventListener("load", () => {
     })
   }
 
-  function burgerHandler(e) {
+  function burgerHandler() {
     burgerMenu.classList.toggle("header__burger--active")
     headerNavigation.classList.toggle("header__navigation-items--active")
  
